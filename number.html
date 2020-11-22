@@ -28,10 +28,7 @@
 		function guess(){
 			console.log("cnnn")
 			tryCount++;
-
-
         var userAnswer = readInt(); //22
-
         if (userAnswer == "q") {
           return; 
         } else if (userAnswer > answer) { 
@@ -44,50 +41,43 @@
         } else if (userAnswer != "q") { 
           write(user + "  \nНеобходимо ввести число"); 
         }
-        
           user = (user == "User1") ? "User2" : "User1";
-      
-	
 		}
-
 	</script>
 </head>
 <body>
-
-<div class="content">
-<div class="header">
-	<a href="index.php">Главная</a>
-	<a href="puzzle.php">Загадки</a>
-	<a href="guess.php">Угадайка</a>
-	<a href="#">Угадайка на 2 игрока</a>
-	<a href="password.php">Генератор пароля</a>
-</div>
-
-<div class="contentWrap">
-	<div class="content">
-			<div class="center">
-
-		<h1>Игра угадайка на 2 игрока</h1>
-
-		<div class="box">
-
-			<p id="info">Угадайте число от 0 до 100</p>
-			<input type="text" id="userAnswer">
-			<br>
-			<a href="#" onClick="guess();" id="button">Начать</a>				
-		</div>
-
-			</div>
+	<div class="header">
+		<ul class="header-menu">
+			<li class="header-menu__item">
+				<a class="link" href="index.html">Главная</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="puzzle.html">Загадки</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="guess.html">Угадайка</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="number.html">Угадайка на 2 игрока</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="password.html">Генератор пароля</a>
+			</li>
+		</ul>
 	</div>
-</div>
-
-	
-
-</div>
-<div class="footer">
-	Copyright &copy; Evgeny Sergeevich
-<div>
-
-
+	<div class="contentWrap">
+		<div class="content">
+			<div class="box">
+				<h1 class="heading">Игра угадайка на 2 игрока</h1>
+				<p class="box__text" id="info">Угадайте число от 0 до 100</p>
+				<input type="text" id="userAnswer">
+				<br>
+				<a class="box__link" href="#" onClick="guess();" id="button">Начать</a>		
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		Copyright &copy; Evgeny Sergeevich
+	<div>
 </body>
 </html>

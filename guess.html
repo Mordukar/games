@@ -15,18 +15,14 @@
 			return parseInt(number);
 			// return +document.getElementById("userAnswer").value;
 		}
-
 		function write(text){
 			document.getElementById("info").innerHTML = text;
 		}
-
 		function hide(id){
 			document.getElementById(id).style.display = "none";
 		}
-
 		function guess(){
 			tryCount++;
-
 			var userAnswer = readInt();
 			if(userAnswer == answer){
 				write("<b>Поздравляю, вы угадали!</b>");
@@ -42,45 +38,39 @@
 				write("Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100");				
 			}
 		}
-
 	</script>
 </head>
 <body>
-
-<div class="content">
-<div class="header">
-		<a href="index.php">Главная</a>
-		<a href="puzzle.php">Загадки</a>
-		<a href="#">Угадайка</a>
-		<a href="number.php">Угадайка на 2 игрока</a>
-		<a href="password.php">Генератор пароля</a>
+	<div class="header">
+		<ul class="header-menu">
+			<li class="header-menu__item">
+				<a class="link" href="index.html">Главная</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="puzzle.html">Загадки</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="guess.html">Угадайка</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="number.html">Угадайка на 2 игрока</a>
+			</li>
+			<li class="header-menu__item">
+				<a class="link" href="password.html">Генератор пароля</a>
+			</li>
+		</ul>
 	</div>
-
-<div class="contentWrap">
-    <div class="content">
-        <div class="center">
-
-			<h1>Игра угадайка</h1>
-
-			<div class="box">
-
-				<p id="info">Угадайте число от 0 до 100</p>
-				<input type="text" id="userAnswer">
-				<br>
-				<a href="#" onClick="guess();" id="button">Начать</a>				
-			</div>
-
-        </div>
-    </div>
-</div>
-
-	
-
-</div>
-<div class="footer">
-	Copyright &copy; Evgeny Sergeevich
-<div>
-
-
+	<div class="contentWrap">
+		<div class="box">
+			<h1 class="heading">Игра угадайка</h1>
+			<p class="box__text" id="info">Угадайте число от 0 до 100</p>
+			<input type="text" id="userAnswer">
+			<br>
+			<a class="box__link" href="#" onClick="guess();" id="button">Начать</a>	
+		</div>
+	</div>
+	<div class="footer">
+		Copyright &copy; Evgeny Sergeevich
+	<div>
 </body>
 </html>
